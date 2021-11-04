@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: jbania <jbania@student.21-school.ru>       +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/21 22:28:28 by jbania            #+#    #+#             */
-/*   Updated: 2021/10/24 20:47:20 by jbania           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
@@ -51,11 +39,4 @@ int main()
 	str2 = ft_strmapi(str1, &f);
 	printf("%s\n", str2);
 }
-*/
-/*
-Applies the function ’f’ to each character of the
-string ’s’ to create a new string (with malloc(3))
-resulting from successive applications of ’f’.
-Return value: The string created from the successive applications
-of ’f’. Returns NULL if the allocation fails.
 */

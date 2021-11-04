@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: jbania <jbania@student.21-school.ru>       +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/21 22:27:07 by jbania            #+#    #+#             */
-/*   Updated: 2021/10/24 22:44:24 by jbania           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
@@ -75,21 +63,4 @@ int 	main(void)
 	printf("%s\n", ds);
 	return (0);
 }
-*/
-/*
-strlcat делает то же самое, однако копирование ведётся не в начало dst, 
-а таким образом, чтобы продолжить строку, на которую указывает dst. 
-
-strlcpy() and strlcat() take the full size of the buffer 
-(not just the length) and guarantee to NUL-terminate the result
-(as long as size is larger than 0 or, n the case of strlcat(), as
-long as there is at least one byte free in dst).
-
-strlcat возвращает суммарную длину строк по адресам src и dst. 
-Возвращаемое значение не зависит от того, удалось скопировать строку 
-полностью или нет; это позволяет легко определить что буфер
-назначения слишком мал для копируемой строки.
-
-В случае, когда dst указывает на нуль-символ, поведение функций
-эквивалентно.
 */

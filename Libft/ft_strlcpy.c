@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: jbania <jbania@student.21-school.ru>       +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/21 22:25:58 by jbania            #+#    #+#             */
-/*   Updated: 2021/10/24 22:44:35 by jbania           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
@@ -68,22 +56,4 @@ int 	main(void)
 	printf("%s\n", ds);
 	return (0);
 }
-*/
-/*
-Функция strlcpy копирует из строки src в буфер dst не более чем
-size - 1 символов и гарантированно устанавливает в конец строки
-нулевой символ. 
-
-strlcpy() and strlcat() take the full size of the buffer
-(not just the length) and guarantee to NUL-terminate the result
-(as long as size is larger than 0 or, n the case of strlcat(),
-as long as there is at least one byte free in dst).
-
-strlcpy возвращает размер строки по адресу src.
-
-В случае, когда dst указывает на нуль-символ, поведение функций
-эквивалентно. строка с null-концом-это строка, в которой символ 
-null '\0' отмечает конец строки (не обязательно конец массива). 
-Все строки в коде (разделенные двойными кавычками "" ) автоматически
-завершаются компилятором null.
 */

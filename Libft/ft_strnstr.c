@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: jbania <jbania@student.21-school.ru>       +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/21 22:24:17 by jbania            #+#    #+#             */
-/*   Updated: 2021/10/24 23:05:46 by jbania           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libft.h"
 
 char	*ft_strnstr(const char *str, const char *to_find, size_t len)
@@ -74,15 +62,4 @@ int main(void)
      printf("%s\n", ptr);
      return 0;
 }
-*/
-/*
-The strnstr() function locates the first occurrence of the  
-null-terminated string little in the string big, where not 
-more than len characters are searched. Characters that appear 
-after a `\0' character are not searched.
-
-If little is an empty string, big is returned; if little 
-occurs nowhere in big, NULL is returned; otherwise a 
-pointer to the first character of the first occurrence 
-of little is returned.
 */
