@@ -1,4 +1,4 @@
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 int	ft_is_n(char c)
 {
@@ -80,7 +80,7 @@ char	*ft_after_n(char *leftovers)
 
 char	*get_next_line(int fd)
 {
-	static char	*leftovers;
+	static char	*leftovers[1024];
 	char		*buf;
 	char		*line;
 	int			bytes_read;
@@ -91,16 +91,16 @@ char	*get_next_line(int fd)
 	buf = malloc(BUFFER_SIZE + 1);
 	if (!buf)
 		return (NULL);
-	while (!ft_check_for_n(leftovers) && bytes_read != 0)
+	while (!ft_check_for_n(leftovers[fd]) && bytes_read != 0)
 	{
 		bytes_read = read(fd, buf, BUFFER_SIZE);
 		if (bytes_read == -1)
 			return (ft_free(buf));
 		buf[bytes_read] = '\0';
-		leftovers = ft_strjoin(leftovers, buf);
+		leftovers[fd] = ft_strjoin(leftovers[fd], buf);
 	}
 	free(buf);
-	line = ft_line(leftovers);
-	leftovers = ft_after_n(leftovers);
+	line = ft_line(leftovers[fd]);
+	leftovers[fd] = ft_after_n(leftovers[fd]);
 	return (line);
 }
