@@ -1,3 +1,4 @@
+
 #include "get_next_line_bonus.h"
 
 char	*ft_free(char *str)
